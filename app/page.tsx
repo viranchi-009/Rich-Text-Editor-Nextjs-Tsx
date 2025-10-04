@@ -30,6 +30,11 @@ export default function Home() {
       <div>
         <RichTextEditor ref={editorRef} />
       </div>
+
+      <div>
+        <h2 className="font-bold text-lg mt-4">Raw Data:</h2>
+        {editorContent}
+      </div>
       <button
         onClick={handleGetContent}
         className="mt-4 px-4 py-2 bg-blue-500 text-white rounded flex "
@@ -42,6 +47,7 @@ export default function Home() {
           className="border p-4 rounded bg-gray-50"
           dangerouslySetInnerHTML={{ __html: editorContent }}
         />
+        
       </div>
     </div>
   );
